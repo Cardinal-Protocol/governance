@@ -1,1 +1,22 @@
-{}
+{
+	"YieldSyncGovernance": {
+		"goerli": {
+			"0x20550E54E4Cb1b6E92D72a47AdbA7d1d59646D86": {
+				"roles": {
+					"DEFAULT_ADMIN_ROLE": {
+						"members": {
+							"0x01208b888908b10089503e4c691fb91863041920": true
+						},
+						"adminRole": "DEFAULT_ADMIN_ROLE"
+					},
+					"JARL": {
+						"members": {
+							"0x96a4bc19e6947b8c4b3fbc47bae0dcb32f0037c8": true
+						},
+						"adminRole": "DEFAULT_ADMIN_ROLE"
+					}
+				}
+			}
+		}
+	}
+}
