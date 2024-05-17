@@ -1,6 +1,6 @@
 {
 	"name": "@yield-sync/governance",
-	"version": "0.0.37",
+	"version": "0.0.38",
 	"description": "",
 	"main": "index.js",
 	"scripts": {},
@@ -17,9 +17,7 @@
 		"@nomiclabs/hardhat-solhint": "^3.0.0",
 		"@openzeppelin/contracts": "^4.9.3",
 		"@openzeppelin/contracts-upgradeable": "^4.9.3",
-		"dotenv": "^16.0.1"
-	},
-	"devDependencies": {
+		"dotenv": "^16.0.1",
 		"ethers": "^5.7.2",
 		"hardhat": "^2.22.4",
 		"ts-node": "^10.9.2",
