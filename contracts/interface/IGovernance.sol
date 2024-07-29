@@ -5,7 +5,7 @@ pragma solidity ^0.8.18;
 import { IAccessControlEnumerable } from "@openzeppelin/contracts/access/IAccessControlEnumerable.sol";
 
 
-interface IYieldSyncGovernance is
+interface IGovernance is
 	IAccessControlEnumerable
 {
 	/**

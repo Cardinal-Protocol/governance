@@ -4,14 +4,14 @@ pragma solidity ^0.8.18;
 
 import { AccessControlEnumerable } from "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 
-import { IYieldSyncGovernance } from "./interface/IYieldSyncGovernance.sol";
+import { IGovernance } from "./interface/IGovernance.sol";
 
 
 contract YieldSyncGovernance is
 	AccessControlEnumerable,
-	IYieldSyncGovernance
+	IGovernance
 {
-	/// @inheritdoc IYieldSyncGovernance
+	/// @inheritdoc IGovernance
 	address public override payTo;
 
 
@@ -20,7 +20,7 @@ contract YieldSyncGovernance is
 		_setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
 	}
 
-	/// @inheritdoc IYieldSyncGovernance
+	/// @inheritdoc IGovernance
 	function payToUpdate(address _payTo)
 		public
 		override
