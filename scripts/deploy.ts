@@ -15,10 +15,8 @@ async function main()
 	console.log("Deployer Account:", deployer.address);
 	console.log("Account Balance:", await deployer.getBalance());
 
-	// Factory
 	const YieldSyncGovernance: ContractFactory = await ethers.getContractFactory('YieldSyncGovernance');
 
-	// Deploy Contract
 	const yieldSyncGovernance: Contract = await (await YieldSyncGovernance.deploy()).deployed();
 
 	console.log("Waiting 30 seconds before verifying..");
@@ -26,7 +24,6 @@ async function main()
 	// Delay
 	await delay(30000);
 
-	// yieldSyncV1ATransferRequestProtocol
 	await run(
 		"verify:verify",
 		{
