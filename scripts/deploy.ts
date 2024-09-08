@@ -21,10 +21,10 @@ async function main()
 
 	console.log(`yieldSyncGovernance address: ${yieldSyncGovernance.address}`);
 
-	console.log("Waiting 30 seconds before verifying..");
+	console.log("Waiting 2 minutes before verifying..");
 
 	// Delay
-	await delay(30000);
+	await delay(120000);
 
 	await run(
 		"verify:verify",

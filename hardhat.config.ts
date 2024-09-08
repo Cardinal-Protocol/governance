@@ -14,7 +14,18 @@ export default {
 			optimisticEthereum: process.env.OPTIMISTIC_ETHERSCAN_API_KEY,
 			optimisticGoerli: process.env.OPTIMISTIC_ETHERSCAN_API_KEY,
 			sepolia: process.env.ETHERSCAN_API_KEY,
-		}
+			"base-sepolia": process.env.SEPOLIA_BASE_API_KEY
+		},
+		customChains: [
+			{
+				network: "base-sepolia",
+				chainId: 84532,
+				urls: {
+					apiURL: "https://api.basescan.org/api",
+					browserURL: "https://basescan.org",
+				},
+			},
+		],
 	},
 	networks: {
 		goerli: {
@@ -55,6 +66,7 @@ export default {
 			url: 'https://sepolia.base.org',
 			accounts: [`0x${process.env.PRIVATE_KEY}` as string],
 			gasPrice: 1000000000,
+			chainId: 84532,
 		}
 	},
 	paths: {
