@@ -3,7 +3,9 @@
 	"version": "0.0.39",
 	"description": "",
 	"main": "index.js",
-	"scripts": {},
+	"scripts": {
+		"deploy-to-base-sepolia": "npx hardhat run scripts/deploy.ts --network base-sepolia"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/yield-sync/governance.git"

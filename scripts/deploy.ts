@@ -19,6 +19,8 @@ async function main()
 
 	const yieldSyncGovernance: Contract = await (await YieldSyncGovernance.deploy()).deployed();
 
+	console.log(`yieldSyncGovernance address: ${yieldSyncGovernance.address}`);
+
 	console.log("Waiting 30 seconds before verifying..");
 
 	// Delay
@@ -32,8 +34,6 @@ async function main()
 			constructorArguments: [],
 		}
 	);
-
-	console.log(`yieldSyncGovernance address: ${yieldSyncGovernance.address}`);
 }
 
 main()
