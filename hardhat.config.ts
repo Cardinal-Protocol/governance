@@ -21,7 +21,7 @@ export default {
 				network: "base-sepolia",
 				chainId: 84532,
 				urls: {
-					apiURL: "https://api.basescan.org/api",
+					apiURL: "https://api-sepolia.basescan.org/api",
 					browserURL: "https://basescan.org",
 				},
 			},
