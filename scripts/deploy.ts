@@ -1,23 +1,33 @@
-require("dotenv").config();
-
+import { writeFileSync } from "fs";
 import { Contract, ContractFactory } from "ethers";
 import { ethers, run, network } from "hardhat";
 
 
+require("dotenv").config();
+
+const path = require('path');
+
+const filePath = path.join(__dirname, '..', 'deployed.txt');
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 
 async function main()
 {
-	const [deployer] = await ethers.getSigners();
+	const [DEPLOYER] = await ethers.getSigners();
 
-	console.log("Deploying on Network:", network.name);
-	console.log("Deployer Account:", deployer.address);
-	console.log("Account Balance:", await deployer.getBalance());
+	writeFileSync(filePath, `Attempted Deployment Timestamp: ${Date.now()}\n`, { flag: "a" });
+
+	const notice: string = `Network: ${network.name}\nAccount: ${DEPLOYER.address}\nBalance: ${await DEPLOYER.getBalance()}\n`;
+
+	writeFileSync(filePath, notice, { flag: "a" });
+
+	console.log(notice);
 
 	const YieldSyncGovernance: ContractFactory = await ethers.getContractFactory('YieldSyncGovernance');
 
 	const yieldSyncGovernance: Contract = await (await YieldSyncGovernance.deploy()).deployed();
+
+	writeFileSync(filePath, `yieldSyncGovernance: ${yieldSyncGovernance.address}\n`, { flag: "a" });
 
 	console.log(`yieldSyncGovernance address: ${yieldSyncGovernance.address}`);
 
@@ -34,6 +44,19 @@ async function main()
 			constructorArguments: [],
 		}
 	);
+
+	const notice_balance_after: string = `Account Balance After: ${await DEPLOYER.getBalance()}\n`;
+
+	writeFileSync(filePath, notice_balance_after, { flag: "a" });
+
+	writeFileSync(
+		filePath,
+		`================================================================================\n\n`,
+		{ flag: "a" }
+	);
+
+	console.log(notice_balance_after);
+
 }
 
 main()
