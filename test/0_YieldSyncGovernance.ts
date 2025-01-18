@@ -1,27 +1,15 @@
 import { expect } from "chai";
 import { Contract, ContractFactory } from "ethers";
-
-const { ethers } = require("hardhat");
-
-
-const stageContracts = async () => {
-	const YieldSyncGovernance: ContractFactory = await ethers.getContractFactory("YieldSyncGovernance");
-
-	const yieldSyncGovernance: Contract = await (await YieldSyncGovernance.deploy()).deployed();
-
-	return {
-		yieldSyncGovernance,
-	};
-}
+import { ethers } from "hardhat";
 
 
 describe("[0] YieldSyncGovernance.sol - YieldSync Governance", async () => {
 	let yieldSyncGovernance: Contract;
 
 	before("[before] Set up contracts..", async () => {
-		const stagedContracts = await stageContracts();
+		const YieldSyncGovernance: ContractFactory = await ethers.getContractFactory("YieldSyncGovernance");
 
-		yieldSyncGovernance = stagedContracts.yieldSyncGovernance
+		yieldSyncGovernance = await (await YieldSyncGovernance.deploy()).deployed();
 	});
 
 	describe("Initial values", async () => {

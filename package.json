@@ -15,7 +15,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
-		"@nomicfoundation/hardhat-toolbox": "^5.0.0",
+		"@nomicfoundation/hardhat-toolbox": "^2.0.1",
 		"@nomicfoundation/hardhat-verify": "^2.0.10",
 		"@nomiclabs/hardhat-solhint": "^3.0.0",
 		"@openzeppelin/contracts": "^4.9.3",
