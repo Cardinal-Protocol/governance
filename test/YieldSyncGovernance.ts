@@ -3,7 +3,7 @@ import { Contract, ContractFactory } from "ethers";
 import { ethers } from "hardhat";
 
 
-describe("[0] YieldSyncGovernance.sol - YieldSync Governance", async () => {
+describe("YieldSyncGovernance.sol - YieldSync Governance", async () => {
 	let yieldSyncGovernance: Contract;
 
 	before("[before] Set up contracts..", async () => {
