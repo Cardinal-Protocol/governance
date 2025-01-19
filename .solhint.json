@@ -7,13 +7,16 @@
 		"custom-errors": "off",
 		"func-name-mixedcase": "off",
 		"func-order": "off",
+		"indent": ["error", 4],
 		"quotes": ["error", "double"],
-		"max-line-length": ["error", 120],
+		"max-line-length": ["warn", 124],
+		"no-console": "warn",
 		"no-empty-blocks": "off",
 		"no-global-import": "warn",
 		"not-rely-on-time": "off",
 		"private-vars-leading-underscore": "warn",
-		"reason-string": ["warn", { "maxLength": 64 }],
-		"var-name-mixedcase": "off"
+		"reason-string": ["warn", { "maxLength": 124 }],
+		"var-name-mixedcase": "off",
+		"reentrancy": "off"
 	}
 }
