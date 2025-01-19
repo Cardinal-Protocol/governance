@@ -1,10 +1,11 @@
 {
 	"name": "@yield-sync/governance",
-	"version": "0.0.41",
-	"description": "",
-	"main": "index.js",
+	"version": "0.0.42",
+	"description": "Refer to README.md",
+	"main": "",
 	"scripts": {
-		"deploy-to-base-sepolia": "npx hardhat run scripts/deploy.ts --network base-sepolia"
+		"deploy-to-base-sepolia": "npx hardhat run scripts/deploy.ts --network base-sepolia",
+		"deploy-to-sepolia": "npx hardhat run scripts/deploy.ts --network sepolia"
 	},
 	"repository": {
 		"type": "git",
